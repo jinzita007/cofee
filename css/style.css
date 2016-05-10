@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body{width: 100%}
+.header_n{
+	border: 1px dashed red;
+	width: 100%;
+  background: #9efd1d;
+}
+.shouhuo{height: 50px;text-align: center;}
+.shouhuo span{font-size: 12px;position: relative;bottom: 5px;left: -5px}
+.shouhuo:before{
+  content: url(../img/dingwei.png);
+  position: relative;
+  top: 5px;
+}
+.banner{
+	border: 1px dashed green;
+  background: url(../img/banner.png) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 260px;
+}
+.main{
+	border: 1px dashed red;
+	width: 100%;
+	/*height: 1191px;*/
+	margin-top: -20px;
+}
+ /*容量选择*/
+.rongliang{
+    width: 100%;
+    height: 200px;
+}
+/*容量标题*/
+.rongliang_w{
+	  border: 1px dashed green;
+    width: 100%;
+    height: 35px;
+    background: #dfdeca;
+    color: #5f4931;
+}
+.rongliang_w span{position: relative;left:8px;top: 8px;}
+ul.rongliang_t_ul{text-align: center;margin-top: 20px;}
+ul.rongliang_t_ul li{overflow: hidden;display: inline;}
+.rongliang_li_01 a img{width: 88px;height: 100px;}
+.rongliang_li_02 a img{width: 70px;height: 88px;}
+.rongliang_li_03 a img{width: 60px;height: 77px;}
+.rongliang_li_04 a img{width: 53px;height: 67px;}
+.ro_01{font-size: 14px;position: absolute;margin-top: 96px;margin-left: -70px;}
+.ro_02{font-size: 14px;position: absolute;margin-top: 96px;margin-left: -60px;}
+.ro_03{font-size: 14px;position: absolute;margin-top: 96px;margin-left: -60px;}
+.ro_04{font-size: 14px;position: absolute;margin-top: 96px;margin-left: -50px;}
+
+/*天然净水*/
+.tianran{
+   width: 100%;
+   height: 250px;
+}
+/*天然净水标题*/
+.tianran_w{
+   border: 1px dashed green;
+   width: 100%;
+   height: 35px;
+   background: #dfdeca;
+   color: #5f4931;
+}
+.tianran_w span{position: relative;left:8px;top: 8px;}
+ul.tianran_t_ul{text-align: center;margin-top: 20px}
+ul.tianran_t_ul li{overflow: hidden;display: inline;}
+.tianran_li_01 a img{width: 174px;height:108px }
+.tianran_li_02 a img{width:63px ;height:101px }
+.tianran_li_01:nth-child(n + 1){margin-right:4%;margin-left:4%;}
+.tianran_li_02:nth-child(n + 1){margin-right:4%;margin-left:4%;}
+.ti_s{position: absolute;margin-top: 115px;margin-left: -130px;font-size: 15px;}
+.ti_f{position: absolute;margin-top: 115px;margin-left: -75px;font-size: 15px;}
+/*饮品定制*/
+.dingzhi{
+   width: 100%;
+   height: 665px;
+   clear:both;
+   
+}
+/*饮品定制标题*/
+.dingzhi_w{
+   border: 1px dashed green;
+   width: 100%;
+   height: 35px;
+   background: #dfdeca;
+   color: #5f4931;
+   margin-bottom: 35px;
+}
+.dingzhi_w span{position: relative;left:8px;top: 8px;}
+.dingzhi_t{}
+ul.dingzhi_t_ul{text-align: center;margin-top: 0px}
+ul.dingzhi_t_ul li{overflow: hidden;display: inline-block;}
+.dingzhi_li_01,.dingzhi_li_02,.dingzhi_li_03,.dingzhi_li_04,.dingzhi_li_05,.dingzhi_li_06,.dingzhi_li_07,.dingzhi_li_08,.dingzhi_li_09{width: 29%;margin-bottom: 20px;}
+ul.dingzhi_t_ul li a{margin-right: 40px}
+/*底部*/
+.footer{
+   bottom:0px;
+   left:0px;
+   border: 1px dashed red;
+   width: 100%;
+   height: 90px;
+   clear:both;
+   background: #9efd1d;
+}
+/*总价*/
+.price{text-align: left;}
+.price span{font-size: 14px;margin-left: 10px;position: relative;top: 5px;}
+/*支付*/
+.zhifu{margin-top: 20px}
+.zhifu_an{margin:0 auto;background: #3de18a;width: 80px;height: 25px;text-align: center;}
+.zhifu_an span{color: #9ff966;font-size: 18px; margin:0px; padding:0px; border:0px;}
+
+#radio1{
+  position: absolute;
+  margin-top: 110px;
+  margin-left: -59px;
+}
+#radio2{
+  position: absolute;
+  margin-top: 110px;
+  margin-left: -49px;
+}
+#radio3{
+  position: absolute;
+  margin-top: 110px;
+  margin-left: -44px;
+}
+#radio4{
+  position: absolute;
+  margin-top: 110px;
+  margin-left: -35px;
+}
+#radio5{
+  position: absolute;
+  margin-top: 135px;
+  margin-left: -90px;
+}
+#radio6{
+  position: absolute;
+  margin-top: 135px;
+  margin-left: -35px;
+}
+.dingzhi_span{font-size: 12px;}
+.di_01{margin-top: 5px}
+.di_01 table{border-right:1px solid #000;border-bottom:1px solid #000;margin: 0 auto;} 
+.di_01 table td{border-left:1px solid #000;border-top:1px solid #000;font-size: 14px;font-weight: bold;} 

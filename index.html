@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>cofee</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/index.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+	$('.ss').click(function(){
+    var    $radio = $(this).find("input[type=radio]"),
+             $flag  = $radio.is(":checked");
+    if( !$flag ){
+        $radio.prop("checked",true);   
+    }
+});
+	</script>
+
+<style>
+.checkbox li, .radio li {
+    display: inline;
+    margin: 6px;
+}
+.checked {
+ background-color: #ff0000;
+ font-weight: bold;
+}
+</style>
+</head>
+<body>
+	  <div class="header">
+	  	<div class="header_n">
+	  	<!--收货地址-->
+	  	<div class="shouhuo">
+	  		<span>取货地址：北京市房山区良乡北路新华购物商场2层 编号A02</span>
+	  	</div>
+	    </div>
+	  	<div class="banner"></div>
+	  </div>
+
+	  <div class="main">
+	  <!--容量选择-->
+	  <div class="rongliang">
+	  	  <!--容量标题-->
+	  	  <div class="rongliang_w">
+	  	  	<span>容量选择</span>
+	  	  </div>
+	  	  <div class="rongliang_t">
+	  	  	<ul class="rongliang_t_ul">
+	  	  		<li class="rongliang_li_01"><a href=""><img src="img/bei_01.png" alt=""></a>
+	  	  			<input type="radio" name="radio" class="fc1" id="radio1" value="a" />
+	  	  			<span class="ro_01">500ML</span>
+	  	  		 </li>
+	  	  		<li class="rongliang_li_02"><a href=""><img src="img/bei_01.png" alt=""></a>
+	  	  			<input type="radio" name="radio" class="fc2" id="radio2" value="b" />
+	  	  			<span class="ro_02">360ML</span>
+	  	  		</li>
+	  	  		<li class="rongliang_li_03"><a href=""><img src="img/bei_01.png" alt=""></a>
+	  	  			<input type="radio" name="radio" class="fc3" id="radio3" value="c" />
+	  	  			<span class="ro_03">240ML</span>
+	  	  		</li>
+	  	  		<li class="rongliang_li_04"><a href=""><img src="img/bei_01.png" alt=""></a>
+	  	  			<input type="radio" name="radio" class="fc4" id="radio4" value="d" />
+	  	  			<span class="ro_04">150ML</span>
+	  	  		</li>
+	  	  	</ul>
+<!--<input type="text" id="checkbox1_value" value="1"><br/>
+<ul id="checkbox1" class="checkbox" nonevalue="0" othervalue="9">
+<li value="" class="checked">1</li>
+<li value="">2</li>
+<li value="">3</li>
+<li value="">4</li>
+</ul>
+<br/>
+<form action="" method="get"> 
+<label><input name="Bei" type="radio" value="" />01 </label> 
+<label><input name="Bei" type="radio" value="" />02 </label> 
+<label><input name="Bei" type="radio" value="" />03 </label> 
+<label><input name="Bei" type="radio" value="" />04 </label> 
+
+</form> -->
+	  	  </div>
+	  </div>
+	  <!--天然净水-->
+	  <div class="tianran">
+	  	 <!--天然净水标题-->
+	  	  <div class="tianran_w">
+	  	  	<span>天然净水</span>
+	  	  </div>
+	  	  <div class="tianran_t">
+	  	  	<ul class="tianran_t_ul">
+	  	  		<li class="tianran_li_01"><a href="/"><img src="img/热水.jpg" alt=""></a><span class="ti_s">80℃以上热水</span><input type="radio" name="radio" class="fc5" id="radio5" value="a" /></li>
+	  	  		<li class="tianran_li_02"><a href="/"><img src="img/冰水.jpg" alt=""></a><span class="ti_f">10℃以下冷水</span><input type="radio" name="radio" class="fc6" id="radio6" value="a" /></li>
+	  	  	</ul>
+	  	  </div>
+	  </div>
+	  <!--饮品定制-->
+	  <div class="dingzhi">
+	  	<!--饮品定制标题-->
+	  	  <div class="dingzhi_w">
+	  	  	<span>饮品定制</span>
+	  	  </div>
+	     <div class="dingzhi_t">
+	  	  	<ul class="dingzhi_t_ul">
+	  	  		<li class="dingzhi_li_01">
+	  	  			<a href="/"><img src="img/咖啡.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			    <div class="di_01">
+							<table width="80" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="40">浓</td>
+									<td width="40">中</td>
+									<td width="40">淡</td>
+								</tr>
+							</table>
+						</div>
+	  	  		</li>
+	  	  		<li class="dingzhi_li_02">
+	  	  			<a href="/"><img src="img/牛奶.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			 <div class="di_01">
+							<table width="80" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="40">浓</td>
+									<td width="40">中</td>
+									<td width="40">淡</td>
+								</tr>
+							</table>
+						</div>
+	  	  		</li>
+	  	  		<li class="dingzhi_li_03">
+	  	  			<a href="/"><img src="img/茶叶.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			 <div class="di_01">
+							<table width="80" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="40">浓</td>
+									<td width="40">中</td>
+									<td width="40">淡</td>
+								</tr>
+							</table>
+						</div>
+	  	  		</li>
+	  	  		<li class="dingzhi_li_04">
+	  	  			<a href="/"><img src="img/可可.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			 <div class="di_01">
+							<table width="80" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="40">浓</td>
+									<td width="40">中</td>
+									<td width="40">淡</td>
+								</tr>
+							</table>
+						</div>
+	  	  		</li>
+	  	  		<li class="dingzhi_li_05">
+	  	  			<a href="/"><img src="img/糖.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			 <div class="di_01">
+							<table width="80" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="40">浓</td>
+									<td width="40">中</td>
+									<td width="40">淡</td>
+								</tr>
+							</table>
+						</div>
+	  	  		</li>
+	  	  		<li class="dingzhi_li_06">
+	  	  			<a href="/"><img src="img/椰子.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			 <div class="di_01">
+							<table width="80" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="40">浓</td>
+									<td width="40">中</td>
+									<td width="40">淡</td>
+								</tr>
+							</table>
+						</div>
+	  	  		</li>
+	  	  		<li class="dingzhi_li_07">
+	  	  			<a href="/"><img src="img/橙子.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			 <div class="di_01">
+							<table width="80" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="40">浓</td>
+									<td width="40">中</td>
+									<td width="40">淡</td>
+								</tr>
+							</table>
+						</div>
+	  	  		</li>
+	  	  		<li class="dingzhi_li_08">
+	  	  			<a href="/"><img src="img/芒果.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			 <div class="di_01">
+							<table width="80" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="40">浓</td>
+									<td width="40">中</td>
+									<td width="40">淡</td>
+								</tr>
+							</table>
+						</div>
+	  	  		</li>
+	  	  		<li class="dingzhi_li_09">
+	  	  			<a href="/"><img src="img/柠檬.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			 <div class="di_01">
+							<table width="80" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="40">浓</td>
+									<td width="40">中</td>
+									<td width="40">淡</td>
+								</tr>
+							</table>
+						</div>
+	  	  		</li>
+	  	  	</ul>
+	  	  </div>
+
+	  </div>
+	  <div class="footer">
+	  <!--总价-->
+	  <div class="price">
+	  	<span>500ML+热水+牛奶（中）+柠檬（淡）+糖（多） 总价</span>
+
+	  </div>
+	    <div class="zhifu">
+	  	 <!--确认支付-->
+	  	<div class="zhifu_an"><span>确定支付</span></div>
+	  	</div>
+	  </div>
+	</div>
+
+</body>
+</html>
