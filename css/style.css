@@ -149,3 +149,7 @@ ul.dingzhi_t_ul li a{margin-right: 40px}
 .di_01{margin-top: 5px}
 .di_01 table{border-right:1px solid #000;border-bottom:1px solid #000;margin: 0 auto;} 
 .di_01 table td{border-left:1px solid #000;border-top:1px solid #000;font-size: 14px;font-weight: bold;} 
+
+ul.dingzhi_t_ul li:hover{
+  border: 1px solid red;
+}
