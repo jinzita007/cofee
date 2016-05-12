@@ -17,84 +17,6 @@
       });
 	});
 	</script>
-	<script type="text/javascript">
-     $(function(){
-
-	//获得文本框对象
-	var t = $("#text_box");	
-	//选择500ml操作
-	
-	//数量增加操作
-	$("#add").click(function(){		
-		t.val(parseInt(t.val())+1)
-		if (parseInt(t.val())!=1){
-			$('#min').attr('disabled',false);
-		}
-		setTotal();
-	})	
-	//数量减少操作
-	$("#min").click(function(){
-		t.val(parseInt(t.val())-1);
-		if (parseInt(t.val())==1){
-			$('#min').attr('disabled',true);
-		}
-		setTotal();
-	})
-	//计算操作
-	function setTotal(){
-		$("#total").html((parseInt(t.val())*3.95).toFixed(2));//toFixed()是保留小数点的函数很实用哦
-	}	
-	//初始化
-	setTotal();
-})
-	</script>
-	<script type="text/javascript">
-    /* $('.fc').click(function(){
-      var $radio = $(this).find("input[type=radio]"),
-           $flag  = $radio.is(":checked");
-           if( !$flag ){
-           $radio.prop("checked",true);   
-       }
-       });
-      $('.fcc').click(function(){
-      var $radio = $(this).find("input[type=radio]"),
-           $flag  = $radio.is(":checked");
-           if( !$flag ){
-           $radio.prop("checked",true);   
-       }
-       });*/
-	</script>
-
-<script>
-    function dianji(){
-        var ra1=document.getElementsByName("radio1");
-         for(var i=0; i<ra1.length; i ++){
-             if(ra1[i].checked){
-                document.getElementById("status1").innerHTML=ra1[i].value;
-             }
-         }
-         var ra2=document.getElementsByName("radio2");
-         for(var i=0; i<ra2.length; i ++){
-             if(ra2[i].checked){
-                document.getElementById("status2").innerHTML=ra2[i].value;
-             }
-         }
-         var ra3=document.getElementsByName("radio3");
-         for(var i=0; i<ra3.length; i ++){
-             if(ra3[i].checked){
-                document.getElementById("status3").innerHTML=ra3[i].value;
-             }
-         }
-         var ra4=document.getElementsByName("radio4");
-         for(var i=0; i<ra4.length; i ++){
-             if(ra4[i].checked){
-                document.getElementById("status4").innerHTML=ra4[i].value;
-             }
-         }
-    }
-</script>
-
-
 	<!--<script type="text/javascript">
 	$('.ss').click(function(){
       var $radio = $(this).find("input[type=radio]"),
@@ -126,13 +48,7 @@
 	      $scope.wendu = {
 	        name: '80℃以上热水'
 	      };
-	      $scope.item = {
-	      	name: '橙子'
-	      };
-	      $scope.change = function(){
-	      	this.value = 'jjj';
-	      }
-	      /*$scope.records = [
+	      $scope.records = [
            {
             "Left" : "浓",
             "Zhong" : "中",
@@ -167,14 +83,14 @@
             "Left" : "浓",
             "Zhong" : "中",
             "Right" : "淡",
-           }];*/
+           }];
            $scope.records7 = [
            {
             "Left" : "浓",
             "Zhong" : "中",
             "Right" : "淡",
            }];
-           /*$scope.records8 = [
+           $scope.records8 = [
            {
             "Left" : "浓",
             "Zhong" : "中",
@@ -185,7 +101,10 @@
             "Left" : "浓",
             "Zhong" : "中",
             "Right" : "淡",
-           }];*/
+           }];
+           $scope.myClick = function(){
+            $scope.isClick = 'Yes!';
+           };
             $scope.totalCart=function(){  
 			  var total = 0;  
 			    for(var i=0;i<$scope.items.length;i++){  
@@ -215,29 +134,21 @@
 	  	  </div>
 	  	  <div class="rongliang_t">
 	  	  	<ul class="rongliang_t_ul">
-	  	  		<li class="rongliang_li_01"><a href=""><img src="themes/default/img/bei_01.png" alt=""></a>
-	  	  			<p>
-	  	  				<input type="radio" name="radio1" class="fc" id="radio1" value="500ML" ng-model="color.name" />
-	  	  			</p>
-	  	  			<p class="ro_01">500ML</p>
+	  	  		<li class="rongliang_li_01"><a href=""><img src="img/bei_01.png" alt=""></a>
+	  	  			<input type="radio" name="radio" class="fc1" id="radio1" value="500ML" ng-model="color.name" />
+	  	  			<span class="ro_01">500ML</span>
 	  	  		 </li>
-	  	  		<li class="rongliang_li_02"><a href=""><img src="themes/default/img/bei_01.png" alt=""></a>
-	  	  			<p>
-	  	  			<input type="radio" name="radio2" class="fc" id="radio2" value="360ML" ng-model="color.name" />
-	  	  			</p>
-	  	  			<p class="ro_02">360ML</p>
+	  	  		<li class="rongliang_li_02"><a href=""><img src="img/bei_01.png" alt=""></a>
+	  	  			<input type="radio" name="radio" class="fc2" id="radio2" value="360ML" ng-model="color.name" />
+	  	  			<span class="ro_02">360ML</span>
 	  	  		</li>
-	  	  		<li class="rongliang_li_03"><a href=""><img src="themes/default/img/bei_01.png" alt=""></a>
-	  	  			<p>
-	  	  			<input type="radio" name="radio3" class="fc" id="radio3" value="240ML" ng-model="color.name" />
-	  	  			</p>
-	  	  			<p class="ro_03">240ML</p>
+	  	  		<li class="rongliang_li_03"><a href=""><img src="img/bei_01.png" alt=""></a>
+	  	  			<input type="radio" name="radio" class="fc3" id="radio3" value="240ML" ng-model="color.name" />
+	  	  			<span class="ro_03">240ML</span>
 	  	  		</li>
-	  	  		<li class="rongliang_li_04"><a href=""><img src="themes/default/img/bei_01.png" alt=""></a>
-	  	  			<p>
-	  	  			<input type="radio" name="radio4" class="fc" id="radio4" value="150ML" ng-model="color.name" />
-	  	  			</p>
-	  	  			<p class="ro_04">150ML</p>
+	  	  		<li class="rongliang_li_04"><a href=""><img src="img/bei_01.png" alt=""></a>
+	  	  			<input type="radio" name="radio" class="fc4" id="radio4" value="150ML" ng-model="color.name" />
+	  	  			<span class="ro_04">150ML</span>
 	  	  		</li>
 	  	  	</ul>
 
@@ -251,19 +162,8 @@
 	  	  </div>
 	  	  <div class="tianran_t">
 	  	  	<ul class="tianran_t_ul">
-	  	  		<li class="tianran_li_01">
-	  	  			<a href="/"><img src="themes/default/img/热水.jpg" alt=""></a>
-	  	  			<p class="ti_s">80℃以上热水</p>
-	  	  			<p>
-	  	  			<input type="radio" name="radio" class="fcc" id="radio5" value="80℃以上热水" ng-model="wendu.name" />
-	  	  		    </p>
-	  	  		</li>
-	  	  		<li class="tianran_li_02"><a href="/"><img src="themes/default/img/冰水.jpg" alt=""></a>
-	  	  			<p class="ti_f">10℃以下冷水</p>
-	  	  			<p>
-	  	  			<input type="radio" name="radio" class="fcc" id="radio6" value="10℃以下冷水" ng-model="wendu.name" />
-	  	  		</p>
-	  	  		</li>
+	  	  		<li class="tianran_li_01"><a href="/"><img src="img/热水.jpg" alt=""></a><span class="ti_s">80℃以上热水</span><input type="radio" name="radio" class="fc5" id="radio5" value="80℃以上热水" ng-model="wendu.name" /></li>
+	  	  		<li class="tianran_li_02"><a href="/"><img src="img/冰水.jpg" alt=""></a><span class="ti_f">10℃以下冷水</span><input type="radio" name="radio" class="fc6" id="radio6" value="10℃以下冷水" ng-model="wendu.name" /></li>
 	  	  	</ul>
 	  	  </div>
 	  </div>
@@ -275,9 +175,9 @@
 	  	  </div>
 	     <div class="dingzhi_t">
 	  	  	<ul class="dingzhi_t_ul">
-	  	  		<!--<li class="dingzhi_li_01" ng-click="myClick()" >
-	  	  			<a href=""><img src="themes/default/img/咖啡.png" alt=""></a>
-	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
+	  	  		<li class="dingzhi_li_01" ng-click="myClick()" >
+	  	  			<a href=""><img src="img/咖啡.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
 	  	  			    <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 								<tr ng-repeat="x in records">
@@ -289,8 +189,8 @@
 						</div>
 	  	  		</li>
 	  	  		<li class="dingzhi_li_02">
-	  	  			<a href=""><img src="themes/default/img/牛奶.png" alt=""></a>
-	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
+	  	  			<a href=""><img src="img/牛奶.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
 	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 								<tr ng-repeat="x in records2">
@@ -302,8 +202,8 @@
 						</div>
 	  	  		</li>
 	  	  		<li class="dingzhi_li_03">
-	  	  			<a href=""><img src="themes/default/img/茶叶.png" alt=""></a>
-	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
+	  	  			<a href=""><img src="img/茶叶.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
 	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
                                 <tr ng-repeat="x in records3">
@@ -315,8 +215,8 @@
 						</div>
 	  	  		</li>
 	  	  		<li class="dingzhi_li_04">
-	  	  			<a href=""><img src="themes/default/img/可可.png" alt=""></a>
-	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
+	  	  			<a href=""><img src="img/可可.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
 	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 							    <tr ng-repeat="x in records4">
@@ -328,8 +228,8 @@
 						</div>
 	  	  		</li>
 	  	  		<li class="dingzhi_li_05">
-	  	  			<a href=""><img src="themes/default/img/糖.png" alt=""></a>
-	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
+	  	  			<a href=""><img src="img/糖.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
 	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 								<tr ng-repeat="x in records5">
@@ -341,8 +241,8 @@
 						</div>
 	  	  		</li>
 	  	  		<li class="dingzhi_li_06">
-	  	  			<a href=""><img src="themes/default/img/椰子.png" alt=""></a>
-	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
+	  	  			<a href=""><img src="img/椰子.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
 	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 								<tr ng-repeat="x in records6">
@@ -352,11 +252,11 @@
 								</tr>
 							</table>
 						</div>
-	  	  		</li>-->
-	  	  		<li class="dingzhi_li_07" ng-model="item.name">
-	  	  			<a href=""><img src="themes/default/img/橙子.png" alt=""></a>
-	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
-	  	  			 <div class="di_01" ng-click="change()">
+	  	  		</li>
+	  	  		<li class="dingzhi_li_07">
+	  	  			<a href=""><img src="img/橙子.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
+	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 								<tr ng-repeat="x in records7">
 									<td width="40">{{x.Left}}</td>
@@ -366,9 +266,9 @@
 							</table>
 						</div>
 	  	  		</li>
-	  	  		<!--<li class="dingzhi_li_08">
-	  	  			<a href=""><img src="themes/default/img/芒果.png" alt=""></a>
-	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
+	  	  		<li class="dingzhi_li_08">
+	  	  			<a href=""><img src="img/芒果.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
 	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 								<tr ng-repeat="x in records8">
@@ -380,8 +280,8 @@
 						</div>
 	  	  		</li>
 	  	  		<li class="dingzhi_li_09">
-	  	  			<a href=""><img src="themes/default/img/柠檬.png" alt=""></a>
-	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
+	  	  			<a href=""><img src="img/柠檬.png" alt=""></a>
+	  	  			<span class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</span>
 	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 								<tr ng-repeat="x in records9">
@@ -391,26 +291,17 @@
 								</tr>
 							</table>
 						</div>
-	  	  		</li>-->
+	  	  		</li>
 	  	  	</ul>
 	  	  </div>
 
 	  </div>
 	  <div class="footer">
-	  	<div class="price">
-	  	<span>{{color.name}}+{{wendu.name}}+{{value}}（淡）</span>
+	  <!--总价-->
+	  <div class="price">
+	  	<span>{{color.name}}+{{wendu.name}}+{{isClick}}+柠檬（淡）+糖（多） 总价:{{totalCart() | currency}}</span>
+
 	  </div>
-	  	<div class="footer_min">
-	  		 <!--总价-->
-	  
-	  	<input id="min" name="" type="button" value="-" />
-		<input id="text_box" name="" type="text" value="1" />
-		<input id="add" name="" type="button" value="+" />
-		<p>总价：
-		  <label id="total"></label>
-		</p>
-		</div>
-	 
 	    <div class="zhifu">
 	  	 <!--确认支付-->
 	  	<div class="zhifu_an"><span>确定支付</span></div>
