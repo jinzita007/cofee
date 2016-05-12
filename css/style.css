@@ -153,3 +153,32 @@ ul.dingzhi_t_ul li a{margin-right: 40px}
 ul.dingzhi_t_ul li:hover{
   border: 1px solid red;
 }
+.dingzhi_li_02_td_01{position: relative;}
+.dingzhi_li_02_td_01:before{
+    content: "\0020";
+    width: 1.3em;
+    height: 0.7em;
+    box-sizing: border-box;
+    z-index: 10;
+    /*bottom: 0.3em;*/
+    position: absolute;
+    /*right: 0.4em;*/
+    border-bottom: 1.5px red solid;
+    border-left: 1.5px red solid;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+/*.dingzhi_li_02_td_01:after{
+    content: "\0020";
+    background: rgba(232, 126, 4, 0.42);
+    position: absolute;
+    height: 1.1em;
+    width: 1.9em;
+   right: 0px;
+    bottom: 0px;
+    z-index: 0;
+}*/

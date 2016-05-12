@@ -6,9 +6,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>cofee</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<script src="js/index.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+      $(".dingzhi_li_02_td_01").click(function(){
+          $(".dingzhi_li_02_td_01:before").css()
+      });
+	});
+	</script>
 	<!--<script type="text/javascript">
 	$('.ss').click(function(){
       var $radio = $(this).find("input[type=radio]"),
@@ -97,6 +105,13 @@
            $scope.myClick = function(){
             $scope.isClick = 'Yes!';
            };
+            $scope.totalCart=function(){  
+			  var total = 0;  
+			    for(var i=0;i<$scope.items.length;i++){  
+			    totaltotal = total + $scope.items[i].price*$scope.items[i].quantity  
+			    }  
+			  return total;  
+			  };    
 	    }]);
 
 </script>
@@ -179,9 +194,9 @@
 	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 								<tr ng-repeat="x in records2">
-									<td width="40">{{x.Left}}</td>
-									<td width="40">{{x.Zhong}}</td>
-									<td width="40">{{x.Right}}</td>
+									<td class="dingzhi_li_02_td_01" width="40">{{x.Left}}</td>
+									<td class="dingzhi_li_02_td_02" width="40">{{x.Zhong}}</td>
+									<td class="dingzhi_li_02_td_03" width="40">{{x.Right}}</td>
 								</tr>
 							</table>
 						</div>
@@ -284,7 +299,7 @@
 	  <div class="footer">
 	  <!--总价-->
 	  <div class="price">
-	  	<span>{{color.name}}+{{wendu.name}}+{{isClick}}+柠檬（淡）+糖（多） 总价</span>
+	  	<span>{{color.name}}+{{wendu.name}}+{{isClick}}+柠檬（淡）+糖（多） 总价:{{totalCart() | currency}}</span>
 
 	  </div>
 	    <div class="zhifu">
