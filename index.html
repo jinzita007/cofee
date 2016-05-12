@@ -130,8 +130,17 @@
 	      	name: '橙子'
 	      };
 	      $scope.change = function(){
-	      	this.value = 'jjj';
-	      }
+	      	this.value = '橙子';
+	      };
+	      $scope.chale = function(){
+	      	this.value2 = '浓';
+	      };
+	      $scope.chazh = function(){
+	      	this.value3 = '中';
+	      };
+	      $scope.chari = function(){
+	      	this.value4 = '淡';
+	      };
 	      /*$scope.records = [
            {
             "Left" : "浓",
@@ -215,25 +224,25 @@
 	  	  </div>
 	  	  <div class="rongliang_t">
 	  	  	<ul class="rongliang_t_ul">
-	  	  		<li class="rongliang_li_01"><a href=""><img src="themes/default/img/bei_01.png" alt=""></a>
+	  	  		<li class="rongliang_li_01"><a href=""><img src="img/bei_01.png" alt=""></a>
 	  	  			<p>
 	  	  				<input type="radio" name="radio1" class="fc" id="radio1" value="500ML" ng-model="color.name" />
 	  	  			</p>
 	  	  			<p class="ro_01">500ML</p>
 	  	  		 </li>
-	  	  		<li class="rongliang_li_02"><a href=""><img src="themes/default/img/bei_01.png" alt=""></a>
+	  	  		<li class="rongliang_li_02"><a href=""><img src="img/bei_01.png" alt=""></a>
 	  	  			<p>
 	  	  			<input type="radio" name="radio2" class="fc" id="radio2" value="360ML" ng-model="color.name" />
 	  	  			</p>
 	  	  			<p class="ro_02">360ML</p>
 	  	  		</li>
-	  	  		<li class="rongliang_li_03"><a href=""><img src="themes/default/img/bei_01.png" alt=""></a>
+	  	  		<li class="rongliang_li_03"><a href=""><img src="img/bei_01.png" alt=""></a>
 	  	  			<p>
 	  	  			<input type="radio" name="radio3" class="fc" id="radio3" value="240ML" ng-model="color.name" />
 	  	  			</p>
 	  	  			<p class="ro_03">240ML</p>
 	  	  		</li>
-	  	  		<li class="rongliang_li_04"><a href=""><img src="themes/default/img/bei_01.png" alt=""></a>
+	  	  		<li class="rongliang_li_04"><a href=""><img src="img/bei_01.png" alt=""></a>
 	  	  			<p>
 	  	  			<input type="radio" name="radio4" class="fc" id="radio4" value="150ML" ng-model="color.name" />
 	  	  			</p>
@@ -252,13 +261,13 @@
 	  	  <div class="tianran_t">
 	  	  	<ul class="tianran_t_ul">
 	  	  		<li class="tianran_li_01">
-	  	  			<a href="/"><img src="themes/default/img/热水.jpg" alt=""></a>
+	  	  			<a href="/"><img src="img/热水.jpg" alt=""></a>
 	  	  			<p class="ti_s">80℃以上热水</p>
 	  	  			<p>
 	  	  			<input type="radio" name="radio" class="fcc" id="radio5" value="80℃以上热水" ng-model="wendu.name" />
 	  	  		    </p>
 	  	  		</li>
-	  	  		<li class="tianran_li_02"><a href="/"><img src="themes/default/img/冰水.jpg" alt=""></a>
+	  	  		<li class="tianran_li_02"><a href="/"><img src="img/冰水.jpg" alt=""></a>
 	  	  			<p class="ti_f">10℃以下冷水</p>
 	  	  			<p>
 	  	  			<input type="radio" name="radio" class="fcc" id="radio6" value="10℃以下冷水" ng-model="wendu.name" />
@@ -353,10 +362,10 @@
 							</table>
 						</div>
 	  	  		</li>-->
-	  	  		<li class="dingzhi_li_07" ng-model="item.name">
-	  	  			<a href=""><img src="themes/default/img/橙子.png" alt=""></a>
+	  	  		<li class="dingzhi_li_07" ng-model="item.name" ng-click="change()">
+	  	  			<a href=""><img src="img/橙子.png" alt=""></a>
 	  	  			<p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
-	  	  			 <div class="di_01" ng-click="change()">
+	  	  			 <div class="di_01">
 							<table width="80" border="0" cellspacing="0" cellpadding="0">
 								<tr ng-repeat="x in records7">
 									<td width="40">{{x.Left}}</td>
@@ -398,7 +407,7 @@
 	  </div>
 	  <div class="footer">
 	  	<div class="price">
-	  	<span>{{color.name}}+{{wendu.name}}+{{value}}（淡）</span>
+	  	<span>{{color.name}}+{{wendu.name}}+{{value}} {{value2}}</span>
 	  </div>
 	  	<div class="footer_min">
 	  		 <!--总价-->
