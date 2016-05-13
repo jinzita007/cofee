@@ -100,7 +100,6 @@ ul.dingzhi_t_ul li{overflow: hidden;display: inline-block;}
 /*ul.dingzhi_t_ul li a{margin-right: 40px}*/
 /*底部*/
 .footer{
-   position:fixed;
    bottom:0px;
    left:0px;
    border: 1px dashed red;
@@ -151,7 +150,7 @@ ul.dingzhi_t_ul li{overflow: hidden;display: inline-block;}
 .dingzhi_span{font-size: 12px;}
 .di_01{margin-top: 5px}
 .di_01 table{border-right:1px solid #000;border-bottom:1px solid #000;margin: 0 auto;} 
-.di_01 table td{border-left:1px solid #000;border-top:1px solid #000;font-size: 14px;font-weight: bold;} 
+.di_01 table td{border-left:1px solid #000;border-top:1px solid #000;font-weight: bold;} 
 
 ul.dingzhi_t_ul li:hover{
   border: 1px solid red;
