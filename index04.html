@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>cofee</title>
+    <script type="text/javascript" src="js/jquery-2.0.0.js"></script>
+   
+    
+   
+    <style>
+    .checkbox li, .radio li { display: inline; margin: 6px; }
+    .checked { background-color: #ff0000; font-weight: bold; }
+    #product img {
+    width:300px;
+    height:200px;
+}
+#product {
+    float: left;
+    padding:5px;
+}
+   </style>
+ </head>
+  
+  <body>
+   
+
+
+
+<div id="product"><img src="assets/Product1.jpg" /><br /><input type="button" value="Buy" class="buy" id="Product1" />&nbsp;price:400$</div>
+<div id="product"><img src="assets/Product2.jpg" /><br /><input type="button" value="Buy" class="buy" id="Product2"/>&nbsp;price:500$</div>
+<div id="product"><img src="assets/Product3.jpg" /><br /><input type="button" value="Buy" class="buy" id="Product3" />&nbsp;price:600$</div><br />
+
+<div id="shopping_cart" align="center">
+    <h1>Shopping cart</h1>
+    <hr />
+    <div id="shopping_cart_items"></div>
+    <hr />
+    Sum:<div id="sum">0$</div>
+</div>
+
+<script type="text/javascript">
+    var sum = 0;
+    var num = 1;
+    //Assign the producets a price date
+    $("#Product1").data("price", 400);
+    $("#Product2").data("price", 500);
+    $("#Product3").data("price", 600);
+
+    //Adding the requested producted to the shopping cart
+    $(".buy").on("click", function (evt) {
+        var id = $(this).attr("id"),
+            item = $('<div class="cart-item"></div>');
+        item.append($(this).attr("id") + " " + "price: ");
+        item.append($(this).data("price") + "$" + "<img src='assets/x.png' width='10px' height='10px' class='cancel' id=" + id + " + data-num= " + num++ + " data-price='" + $(this).data("price") + "' >" + "<br>");
+        
+        item.appendTo($("#shopping_cart_items"));
+
+        //summing up the overall price
+        sum = sum + $(this).data("price");
+        $("#sum").text(sum + "$");
+    });
+
+    //Delete product from the shopping cart
+    $("#shopping_cart").on("click", ".cancel", function (evt) {
+        var $this = $(evt.currentTarget),
+            cartItem = $this.parent(),
+            newPrice = parseInt($this.data('price'));
+        
+        cartItem.remove();
+        sum = sum - newPrice;
+        $("#sum").text(sum + "$");
+    });
+    </script>
+</body>
+
+</html>

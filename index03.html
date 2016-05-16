@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>cofee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript">$(document).ready(function() {
+        $(".dingzhi_li_02_td_01").click(function() {
+          $(".dingzhi_li_02_td_01:before").css()
+        });
+      });
+    </script>
+   
+   
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+    /*容量选择*/
+    $(".fc").click(function(){
+       var rong = $("input[name='rong']:checked").val();
+        $("#text1").text("500ML");
+     });
+    $(".fc2").click(function(){
+       var rong = $("input[name='rong']:checked").val();
+        $("#text1").text("360ML");
+     });
+    $(".fc3").click(function(){
+       var rong = $("input[name='rong']:checked").val();
+        $("#text1").text("240ML");
+     });
+    $(".fc4").click(function(){
+       var rong = $("input[name='rong']:checked").val();
+        $("#text1").text("150ML");
+     });
+
+    /*天然净水的选择*/
+     $(".fcc").click(function(){
+       var tian = $("input[name='tian']:checked").val();
+       $("#text2").text("80℃以上热水");
+     });
+     $(".fcc2").click(function(){
+       var tian = $("input[name='tian']:checked").val();
+       $("#text2").text("10℃以下冷水");
+     });
+
+      /*饮品定制的选择*/
+     $(".fccc").click(function(){
+       var ding = $("input[name='ding']:checked").val();
+       $("#text3").text("浓");
+     });
+     $(".fccc2").click(function(){
+       var ding = $("input[name='ding']:checked").val();
+       $("#text3").text("中");
+     });
+     $(".fccc3").click(function(){
+       var ding = $("input[name='ding']:checked").val();
+       $("#text3").text("淡");
+     });
+
+    });
+    </script>
+    <style>
+    .checkbox li, .radio li { display: inline; margin: 6px; }
+    .checked { background-color: #ff0000; font-weight: bold; }
+    #product img {
+    width:300px;
+    height:200px;
+}
+#product {
+    float: left;
+    padding:5px;
+}
+   </style>
+ </head>
+  
+  <body>
+    <div class="header">
+      <div class="header_n">
+        <!--收货地址-->
+        <div class="shouhuo">
+          <span>取货地址：北京市房山区良乡北路新华购物商场2层 编号A02</span>
+        </div>
+      </div>
+      <div class="banner"></div>
+    </div> 
+    <div class="main">
+      <!--容量选择-->
+      <div class="rongliang">
+        <!--容量标题-->
+        <div class="rongliang_w">
+          <span>容量选择</span></div>
+        <div class="rongliang_t">
+          <ul class="rongliang_t_ul">
+            <li class="rongliang_li_01">
+              <a href="">
+                <img src="img/bei_01.png" alt="">
+              </a>
+              <p>
+                <input type="radio" name="rong" class="fc buy" id="radio1" value="500ML" />
+              </p>
+              <p class="ro_01">500ML</p>
+            </li>
+            <li class="rongliang_li_02">
+              <a href="">
+                <img src="img/bei_01.png" alt="">
+              </a>
+              <p>
+                <input type="radio" name="rong" class="fc2 buy" id="radio2" value="360ML" />
+              </p>
+              <p class="ro_02">360ML</p>
+            </li>
+            <li class="rongliang_li_03">
+              <a href="">
+                <img src="img/bei_01.png" alt="">
+              </a>
+              <p>
+                <input type="radio" name="rong" class="fc3 buy" id="radio3" value="240ML" />
+              </p>
+              <p class="ro_03">240ML</p>
+            </li>
+            <li class="rongliang_li_04">
+              <a href="">
+                <img src="img/bei_01.png" alt="">
+              </a>
+              <p>
+                <input type="radio" name="rong" class="fc4 buy" id="radio4" value="150ML" />
+              </p>
+              <p class="ro_04">150ML</p></li>
+          </ul>
+        </div>
+      </div>
+      <!--天然净水-->
+      <div class="tianran">
+        <!--天然净水标题-->
+        <div class="tianran_w">
+          <span>天然净水</span></div>
+        <div class="tianran_t">
+          <ul class="tianran_t_ul">
+            <li class="tianran_li_01">
+              <a href="/">
+                <img src="img/热水.jpg" alt=""></a>
+              <p class="ti_s">80℃以上热水</p>
+              <p>
+                <input type="radio" name="tian" class="fcc" id="radio5" value="0" /></p>
+            </li>
+            <li class="tianran_li_02">
+              <a href="/">
+                <img src="img/冰水.jpg" alt=""></a>
+              <p class="ti_f">10℃以下冷水</p>
+              <p>
+                <input type="radio" name="tian" class="fcc2" id="radio6" value="0" /></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--饮品定制-->
+      <div class="dingzhi">
+        <!--饮品定制标题-->
+        <div class="dingzhi_w">
+          <span>饮品定制</span>
+        </div>
+        <div class="dingzhi_t">
+          <ul class="dingzhi_t_ul">
+            <li class="dingzhi_li_07">
+              <a href="">
+                <img src="img/橙子.png" alt=""></a>
+              <p class="dingzhi_span">进口咖啡豆研制速溶咖啡，醇香提神</p>
+              <div class="di_01">
+                <table width="80" border="0" cellspacing="0" cellpadding="0">
+                  <tr ng-repeat="x in records7">
+                    <td width="40">
+                      <input type="radio" name="ding" value="0" class="fccc">浓</input>
+                    </td>
+                    <td width="40">
+                      <input type="radio" name="ding" value="0" class="fccc2">中</input>
+                    </td>
+                    <td width="40">
+                      <input type="radio" name="ding" value="0" class="fccc3">淡</input>
+                    </td>
+              
+                  </tr>
+                </table>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+       
+
+      <div class="footer">
+       
+        <div class="footer_min">
+        <!--总价-->
+        <span id="text1"></span>
+        <span id="text2"></span>
+        <span id="text3"></span>
+        </div>
+        <div id="shopping_cart" align="center">
+        <div id="shopping_cart_items"></div>
+          总价格:<div id="sum">0元</div>
+       </div>
+        <div class="zhifu">
+          <!--确认支付-->
+          <div class="zhifu_an">
+            <span>确定支付</span></div>
+        </div>
+      </div>
+   </div>
+
+    <script type="text/javascript">
+    var sum = 0;
+    var num = 1;
+    //Assign the producets a price date
+    $("#radio1").data("price", 30);
+    $("#radio2").data("price", 26);
+    $("#radio3").data("price", 19);
+    $("#radio4").data("price", 15);
+
+    //Adding the requested producted to the shopping cart
+    $(".buy").on("click", function (evt) {
+        var id = $(this).attr("id"),
+            item = $('<div class="cart-item"></div>');
+        item.append($(this).attr("value") + " " + ": ");
+        item.append($(this).data("price") + "元" + "<img src='assets/x.png' width='10px' height='10px' class='cancel' id=" + id + " + data-num= " + num++ + " data-price='" + $(this).data("price") + "' >" + "<br>");
+        
+        item.appendTo($("#shopping_cart_items"));
+
+        //summing up the overall price
+        sum = sum + $(this).data("price");
+        $("#sum").text(sum + "元");
+    });
+
+    //Delete product from the shopping cart
+    $("#shopping_cart").on("click", ".cancel", function (evt) {
+        var $this = $(evt.currentTarget),
+            cartItem = $this.parent(),
+            newPrice = parseInt($this.data('price'));
+        
+        cartItem.remove();
+        sum = sum - newPrice;
+        $("#sum").text(sum + "元");
+    });
+    </script>
+  </body>
+
+</html>
